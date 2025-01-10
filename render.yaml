@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mood-journal-api
+    runtime: python
+    plan: free                          # Free tier — no credit card needed
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false                     # Set manually in Render dashboard
+      - key: DATABASE_URL
+        value: sqlite:///./journal.db
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: PYTHON_VERSION
+        value: 3.11.0

@@ -1,0 +1,32 @@
+# Environment & secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+# Allow the populated journal.db to be committed so the POC data is visible
+!journal.db
+
+# Azure deployment artifacts
+.python_packages/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
