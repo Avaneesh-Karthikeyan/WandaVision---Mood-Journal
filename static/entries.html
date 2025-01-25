@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal - Past Entries</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Link -->
+        <nav style="text-align: left; margin-bottom: 2rem;">
+            <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1.1rem;">
+                &larr; Write a New Entry
+            </a>
+        </nav>
+
+        <header>
+            <h1>Your Journey</h1>
+            <p>Look back at your past reflections and AI insights.</p>
+        </header>
+
+        <main>
+            <!-- Section to display the history of entries -->
+            <section class="entries-section">
+                <div id="entries-container" class="entries-grid">
+                    <!-- Entries will be dynamically loaded here by app.js -->
+                    <div class="loading-state">Loading your journal...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal - Compose</title>
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Link -->
+        <nav style="text-align: right; margin-bottom: 2rem;">
+            <a href="/entries" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1.1rem;">
+                View Past Entries &rarr;
+            </a>
+        </nav>
+
+        <header>
+            <h1>Mood Journal</h1>
+            <p>Write down your thoughts, and let AI analyze your feelings.</p>
+        </header>
+
+        <main>
+            <!-- Form to compose a new journal entry -->
+            <section class="compose-section glass-panel">
+                <h2>New Entry</h2>
+                <form id="journal-form">
+                    <textarea id="journal-text" placeholder="How was your day today?" required></textarea>
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-text">Save Entry</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                </form>
+                <div id="error-message" class="hidden error"></div>
+                <div id="success-message" class="hidden" style="color: var(--mood-positive); margin-top: 1rem; font-weight: 500;">
+                    Entry saved successfully! Redirecting...
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
